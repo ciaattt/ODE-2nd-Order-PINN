@@ -74,7 +74,7 @@ for i in range (epochs+1):
             Loss_Ode = tf.reduce_mean(tf.square(Loss_Ode_1))
             Loss_Bc = tf.square(y[0]-Ic_1()) + tf.square(Dy[0]-Ic_2())
             Loss_MSE = tf.reduce_mean(tf.square(y_actual-y))
-            Total_Loss = Loss_Ode + Loss_Bc 
+            Total_Loss = Loss_Ode + Loss_Bc + Loss_MSE
             Loss.append(Total_Loss)
         if i % 100 == 0:
 
