@@ -96,7 +96,7 @@ for i in range (epochs+1):
 
             with tf.GradientTape() as tape_a:
 
-                y = model_1(x,training = True)[:,i:i+1]
+                y = model_1(x,training = True)
                 Dy = D_y(tape_a,x,y)
 
             Dyy = D_yy(tape_b,x,y)
@@ -124,7 +124,7 @@ for i in range (epochs+1):
 
             with tf.GradientTape() as tape_a:
 
-                y = model_2(x,training = True)[:,i:i+1]
+                y = model_2(x,training = True)
                 Dy = D_y(tape_a,x,y)
 
             Dyy = D_yy(tape_b,x,y)
@@ -152,7 +152,7 @@ for i in range (epochs+1):
 
             with tf.GradientTape() as tape_a:
 
-                y = model_3(x,training = True)[:,i:i+1]
+                y = model_3(x,training = True)
                 Dy = D_y(tape_a,x,y)
 
             Dyy = D_yy(tape_b,x,y)
